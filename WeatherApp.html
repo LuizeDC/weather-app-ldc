@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/17bb64f698.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search">
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Enter a city"
+          id="search-text-input"
+        />
+        <button><i class="fas fa-search" id="search-button"></i></button>
+        <button><i class="fas fa-location-arrow"></i></button>
+      </div>
+      <br />
+
+      <div class="weather">
+        <h2 class="primaryCity">Chicago</h2>
+        <h3 id="weekDay">Saturday, 4:55pm</h3>
+        <br />
+        <div class="row">
+          <div class="col-6">
+            <h4 id="currentTemperature">2°</h4>
+            <div class="celsius">C</div>
+            <div class="farenheit">F</div>
+            <div class="description">Cloudy</div>
+          </div>
+          <div class="col-6">
+            <div class="icon">
+              <i class="fas fa-cloud main-cloud"></i>
+              <div class="humidity-wind">
+                Humidity: 70% <br />
+                Wind: 3 Km/H
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="weekly-forecast">Sun Mon Tue Wed Thu</div>
+        <div class="weekly-icons"></div>
+        <i class="fas fa-cloud weekly-cloud"></i>
+        <i class="fas fa-cloud weekly-cloud"></i>
+        <i class="fas fa-cloud weekly-cloud"></i>
+        <i class="fas fa-cloud-sun weekly-cloud"></i>
+        <i class="fas fa-sun weekly-cloud"></i>
+        <div class="weekly-temp">-2° -1° 0° -8° -9°</div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
