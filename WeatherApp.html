@@ -11,6 +11,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,20 +20,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="search">
-        <input
-          type="text"
-          class="search-bar"
-          placeholder="Enter a city"
-          id="search-text-input"
-        />
-        <button><i class="fas fa-search" id="search-button"></i></button>
-        <button><i class="fas fa-location-arrow"></i></button>
+     <form id="search-form">
+  <div class="search">
+    <input
+      type="text"
+      class="search-bar"
+      placeholder="Enter a city"
+      id="search-text-input"
+    />
+    <button><i class="fas fa-search" id="search-button"></i></button>
+    <button type="button">
+      <i class="fas fa-location-arrow" id="current-location"></i>
+    </button></form>
+
       </div>
       <br />
 
       <div class="weather">
-        <h2 class="primaryCity">Chicago</h2>
+        <h2 id="primaryCity">Chicago</h2>
         <h3 id="weekDay">Saturday, 4:55pm</h3>
         <br />
         <div class="row">
@@ -40,15 +45,13 @@
             <h4 id="currentTemperature">2°</h4>
             <div class="celsius">C</div>
             <div class="farenheit">F</div>
-            <div class="description">Cloudy</div>
+            <div id="description">Cloudy</div>
           </div>
           <div class="col-6">
             <div class="icon">
               <i class="fas fa-cloud main-cloud"></i>
-              <div class="humidity-wind">
-                Humidity: 70% <br />
-                Wind: 3 Km/H
-              </div>
+              <div class="hum">Humidity: <span id="humidity"></span>%</div>
+              <div class="wind">Wind: <span id="wind"></span> km/h</div>
             </div>
           </div>
         </div>
@@ -62,6 +65,7 @@
         <i class="fas fa-sun weekly-cloud"></i>
         <div class="weekly-temp">-2° -1° 0° -8° -9°</div>
       </div>
+    </div>
     </div>
     <script src="script.js"></script>
   </body>
