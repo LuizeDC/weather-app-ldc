@@ -31,7 +31,8 @@ body {
   box-shadow: 3px 3px 3px 1px rgba(57, 78, 87, 0.27);
 }
 
-button {
+#search-button,
+#current-location {
   color: rgba(40, 75, 88, 0.27);
   position: relative;
   opacity: 0.6;
@@ -39,7 +40,7 @@ button {
   border-radius: 50%;
 }
 
-.primaryCity {
+#primaryCity {
   text-align: left;
   color: #f1f6fa;
   font-size: 60px;
@@ -95,7 +96,9 @@ h4 {
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
 
-.description {
+#description,
+.wind,
+.hum {
   color: #1b2e3a;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
