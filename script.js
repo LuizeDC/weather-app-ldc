@@ -16,31 +16,46 @@ let hour = now.getHours();
 let minutes = now.getMinutes();
 changeWeekDay.innerHTML = `${day}, ${hour}:${minutes}`;
 
-function showCity(event) {
-  event.preventDefault();
+function displayWeather(response) {
+  document.querySelector("#primaryCity").innerHTML = response.data.name;
+  document.querySelector("#currentTemperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
 
-  let city = document.querySelector("#search-text-input");
-  let cityNameChange = document.querySelector(".primaryCity");
-  if (city.value) {
-    cityNameChange.innerHTML = city.value;
-  }
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
 }
 
-let searchButton = document.querySelector("#search-button");
-searchButton.addEventListener("click", showCity);
+function searchCity(city) {
+  let apiKey = "c46ec9601bc78f55112eb9948c246ef2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-function convertToF(event) {
-  event.preventDefault();
-  let fahrenheit = document.querySelector("#currentTemperature");
-  fahrenheit.innerHTML = (15 * 9) / 5 + 32;
+  axios.get(apiUrl).then(displayWeather);
 }
-let convertF = document.querySelector(".farenheit");
-convertF.addEventListener("click", convertToF);
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#search-text-input").value;
+  searchCity(city);
+}
 
-function convertToC(event) {
-  event.preventDefault();
-  let celisius = document.querySelector("#currentTemperature");
-  celisius.innerHTML = 15;
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
+function searchLocation(position) {
+  let apiKey = "c46ec9601bc78f55112eb9948c246ef2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayWeather);
 }
-let convertC = document.querySelector(".celsius");
-convertC.addEventListener("click", convertToC);
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
