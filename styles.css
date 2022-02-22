@@ -11,6 +11,7 @@ body {
   margin: 0;
   background: #ffffff;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/428/original/brady-bellini-_hpk_92Crhs-unsplash_%281%29.jpg?1642891675");
+  flex-direction: column;
 }
 
 .container {
@@ -31,8 +32,10 @@ body {
   box-shadow: 3px 3px 3px 1px rgba(57, 78, 87, 0.27);
 }
 
+button,
 #search-button,
 #current-location {
+  font-size: 16.5px;
   color: rgba(40, 75, 88, 0.27);
   opacity: 0.8;
   border-radius: 10px;
@@ -147,5 +150,10 @@ h4 {
   padding: 5px 0px 0px 10px;
 }
 
-small {
+small,
+#open-source {
+  text-align: center;
+  opacity: 0.1px;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.61);
 }
