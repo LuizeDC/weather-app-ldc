@@ -126,7 +126,9 @@ h3,
 }
 
 hr {
-  color: #0b4564;
+  color: rgb(255, 255, 255);
+  height: 1px;
+  border: #dae2f8;
 }
 .weekly-forecast {
   color: #032d46;
