@@ -11,15 +11,17 @@ body {
   margin: 0;
   background: #ffffff;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/428/original/brady-bellini-_hpk_92Crhs-unsplash_%281%29.jpg?1642891675");
+  background-size: 2500px;
   flex-direction: column;
 }
 
 .container {
+  background-color: rgba(245, 245, 245, 0.27);
   max-width: 400px;
   margin: 35px auto;
   width: 100%;
   padding: 1cm;
-  border: 1px solid #dae2f8;
+  border: 1px solid 2% #dae2f8;
   border-radius: 30px;
   box-shadow: 10px 10px 10px 3px rgba(125, 134, 146, 0.27);
 }
@@ -32,13 +34,11 @@ body {
   box-shadow: 3px 3px 3px 1px rgba(57, 78, 87, 0.27);
 }
 
-button,
-#search-button,
-#current-location {
+button {
   font-size: 16.5px;
   color: rgba(40, 75, 88, 0.27);
   opacity: 0.8;
-  border-radius: 10px;
+  border-radius: 60%;
   border: 1px solid rgba(154, 198, 216, 0.27);
   box-shadow: 3px 3px 3px 1px rgba(57, 78, 87, 0.27);
 }
@@ -49,7 +49,6 @@ button,
   font-size: 60px;
   font-family: "Manrope", sans-serif;
   font-weight: thin;
-  opacity: 0.9;
   position: relative;
   top: 5px;
   left: -10px;
@@ -58,35 +57,47 @@ button,
 
 h3,
 .weekday {
-  color: #1b2e3a;
+  color: #054266;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
-  font-size: 20px;
+  font-size: 18px;
   opacity: 0.8;
   position: relative;
-  top: -5px;
-  left: -5px;
-  text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
+  top: -7px;
+  left: 2px;
+  text-shadow: 2px 2px 2px rgba(49, 71, 82, 0.27);
 }
-h4 {
+#currentTemperature {
   color: #e7f6ff;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
-  font-size: 70px;
+  font-size: 90px;
   opacity: 0.9;
   text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
   position: relative;
-  right: -12px;
+  right: 20px;
 }
-.celsius,
-.conversion,
+.celsius {
+  color: #e7f6ff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: thin;
+  font-size: 25px;
+  position: relative;
+  opacity: 0.7;
+  top: -128px;
+  right: -105px;
+  text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
+}
 .farenheit {
   color: #e7f6ff;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
+  font-size: 25px;
   position: relative;
-  top: -80px;
-  right: -105px;
+  opacity: 0.7;
+  top: -166px;
+  right: -143px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
 
@@ -102,24 +113,22 @@ h4 {
 #description,
 .wind,
 .hum {
-  color: #1b2e3a;
+  color: #054266;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   opacity: 0.8;
+  text-align: justify;
   text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
   position: relative;
   top: -10px;
-  right: -15px;
+  right: -26px;
 }
 
-.humidity-wind {
-  font-family: "Open Sans", sans-serif;
-  text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
-  position: relative;
-  right: -25px;
+hr {
+  color: #0b4564;
 }
-
 .weekly-forecast {
+  color: #032d46;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   text-align: center;
@@ -141,6 +150,7 @@ h4 {
 }
 
 .weekly-temp {
+  color: #032d46;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   text-align: center;
