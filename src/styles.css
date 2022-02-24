@@ -85,7 +85,7 @@ h3,
   font-size: 25px;
   position: relative;
   opacity: 0.7;
-  top: -128px;
+  top: -75px;
   right: -105px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
@@ -96,7 +96,7 @@ h3,
   font-size: 25px;
   position: relative;
   opacity: 0.7;
-  top: -166px;
+  top: -112.5px;
   right: -143px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
@@ -122,6 +122,7 @@ h3,
   position: relative;
   top: -10px;
   right: -26px;
+  margin: 15px 0px -60px 0px;
 }
 
 hr {
