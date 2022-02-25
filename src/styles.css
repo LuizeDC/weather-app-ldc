@@ -37,7 +37,7 @@ body {
 button {
   font-size: 16.5px;
   color: rgba(40, 75, 88, 0.27);
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 60%;
   border: 1px solid rgba(154, 198, 216, 0.27);
   box-shadow: 3px 3px 3px 1px rgba(57, 78, 87, 0.27);
@@ -78,27 +78,39 @@ h3,
   position: relative;
   right: 20px;
 }
-.celsius {
+#celsius {
   color: #e7f6ff;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
-  font-size: 25px;
+  font-size: 18px;
   position: relative;
-  opacity: 0.7;
-  top: -75px;
-  right: -105px;
+  opacity: 0.5;
+  top: -65px;
+  right: -110px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
-.farenheit {
+#fahrenheit {
   color: #e7f6ff;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
-  font-size: 25px;
+  font-size: 18px;
   position: relative;
-  opacity: 0.7;
-  top: -112.5px;
-  right: -143px;
+  opacity: 0.5;
+  top: -92.2px;
+  right: -140px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
+}
+
+#celsius:hover {
+  color: #054266;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+#fahrenheit:hover {
+  color: #054266;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
 }
 
 .main-cloud {
