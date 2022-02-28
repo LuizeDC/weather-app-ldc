@@ -1,26 +1,20 @@
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+let now = new Date();
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
-}
+let changeWeekDay = document.querySelector("#weekDay");
+let date = now.getDate();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+let hour = now.getHours();
+let minutes = now.getMinutes();
+changeWeekDay.innerHTML = `${day}, ${hour}:${minutes}`;
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemperature");
