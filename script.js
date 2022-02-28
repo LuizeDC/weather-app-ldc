@@ -108,4 +108,4 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-search("New York");
+searchCity("New York");
