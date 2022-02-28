@@ -101,4 +101,4 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-searchCity("New York");
+searchCity("Chicago");
