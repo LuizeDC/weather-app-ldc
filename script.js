@@ -9,7 +9,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let hour = now.getHours();
@@ -22,6 +22,7 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemperature = response.data.main.temp;
@@ -31,16 +32,17 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  document
+    .querySelector("#weather-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
 }
 
 function searchCity(city) {
   let apiKey = "c46ec9601bc78f55112eb9948c246ef2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -55,7 +57,7 @@ searchForm.addEventListener("submit", handleSubmit);
 
 function searchLocation(position) {
   let apiKey = "c46ec9601bc78f55112eb9948c246ef2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayWeather);
 }
@@ -91,7 +93,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 function searchLocation(position) {
   let apiKey = "c46ec9601bc78f55112eb9948c246ef2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(displayWeather);
 }
