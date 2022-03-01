@@ -113,16 +113,35 @@ h3,
   transition: all 500ms ease-in-out;
 }
 
-.main-cloud {
-  display: block;
+.float-left,
+#weather-icon {
+  padding: -10px;
+  margin: -12px;
+  align-items: center;
   color: #e7f6ff;
   position: relative;
-  font-size: 120px;
-  top: -20px;
+  justify-content: center;
+  align-items: center;
+  right: -20px;
+  top: -10px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
 
-#description,
+#description {
+  color: #e7f6ff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
+  position: relative;
+  top: -10px;
+  right: -10px;
+  margin: 15px 0px -60px 0px;
+  letter-spacing: 0.05cm;
+}
+
 .wind,
 .hum {
   color: #054266;
