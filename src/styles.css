@@ -11,7 +11,7 @@ body {
   margin: 0;
   background: #ffffff;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/025/428/original/brady-bellini-_hpk_92Crhs-unsplash_%281%29.jpg?1642891675");
-  background-size: 2500px;
+  background-size: 2800px;
   flex-direction: column;
 }
 
@@ -44,27 +44,29 @@ button {
 }
 
 #primaryCity {
-  text-align: left;
+  text-align: center;
   color: #f1f6fa;
   font-size: 60px;
   font-family: "Manrope", sans-serif;
   font-weight: thin;
   position: relative;
   top: 5px;
-  left: -10px;
+  left: 00px;
   text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
 }
 
 h3,
 .weekday {
   color: #054266;
+  text-align: left;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
   font-size: 18px;
   opacity: 0.8;
   position: relative;
   top: -7px;
-  left: 2px;
+  left: 20px;
+  letter-spacing: 8px;
   text-shadow: 2px 2px 2px rgba(49, 71, 82, 0.27);
 }
 #currentTemperature {
@@ -115,6 +117,7 @@ h3,
 
 .float-left,
 #weather-icon {
+  width: 160;
   padding: -10px;
   margin: -12px;
   align-items: center;
@@ -122,7 +125,7 @@ h3,
   position: relative;
   justify-content: center;
   align-items: center;
-  right: -20px;
+  right: -27px;
   top: -10px;
   text-shadow: 3px 3px 3px rgba(38, 52, 59, 0.27);
 }
@@ -164,7 +167,7 @@ hr {
 .weekly-forecast {
   color: #032d46;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
   text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
   opacity: 0.9;
@@ -172,18 +175,8 @@ hr {
   padding: 0px 0px 3px 0px;
 }
 
-.weekly-cloud {
-  text-align: center;
-  color: #e7f6ff;
-  font-size: 20px;
-  text-align: center;
-  position: relative;
-  right: -13px;
-  padding: 6px 21px 2px 13px;
-  text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
-}
-
-.weekly-temp {
+#min,
+#max {
   color: #032d46;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -192,6 +185,10 @@ hr {
   opacity: 0.9;
   word-spacing: 40px;
   padding: 5px 0px 0px 10px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
 
 small,
