@@ -58,7 +58,7 @@ button {
 h3,
 .weekday {
   color: #054266;
-  text-align: left;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: thin;
   font-size: 18px;
@@ -78,7 +78,7 @@ h3,
   opacity: 0.9;
   text-shadow: 3px 3px 6px rgba(38, 52, 59, 0.27);
   position: relative;
-  right: px;
+  right: 20px;
 }
 #celsius {
   color: #e7f6ff;
